@@ -16,5 +16,5 @@ Once installed you can run the following:
 
 ```bash
 # look up word definition via urban dictionary
-udefine painting
+udefine unix
 ```
