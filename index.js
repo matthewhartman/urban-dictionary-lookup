@@ -25,7 +25,7 @@ if (meaning) {
   const darksmoke = chalk.hex('#aaa');
   const grey = chalk.hex('#777');
 
-  console.log(`\n${white.bold(word.innerText)} \n`);
+  console.log(`\n${white.inverse.bold(` ${word.innerText} `)} \n`);
   console.log(darksmoke(`${formatHTML(meaning.innerHTML)} ${example ? `${grey(`\n\nexample: ${formatHTML(example.innerHTML)}`)}` : ''}\n`));
 } else {
   console.log(`Could not find definition for ${args[0]}`);
