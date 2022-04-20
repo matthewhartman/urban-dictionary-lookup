@@ -1,10 +1,10 @@
 {
   "name": "urban-dictionary-lookup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Look up dictionary words straight in the terminal",
   "main": "index.js",
   "bin": {
-    "define": "./index.js"
+    "udefine": "./index.js"
   },
   "type": "module",
   "dependencies": {
@@ -19,7 +19,8 @@
   "keywords": [
     "dictionary",
     "define",
-    "words"
+    "words",
+    "urban dictionary"
   ],
   "author": "Matthew Hartman <matthewhartmanau@gmail.com>",
   "license": "MIT",
