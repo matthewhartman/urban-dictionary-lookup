@@ -9,14 +9,14 @@ var args = process.argv.slice(2);
 
 const formatHTML = function(html) {
   return html ? html
-                .replace(/&quot;/g,'"')
-                .replace(/&apos;/g,`'`)
-                .replace('<br>', `\n\n`)
-                .replace(/(<([^>]+)>)/ig, '')
-                .replace(/&lt;/g,'<')
-                .replace(/&gt;/g,'>')
-                .replace(/&amp;/g,'&')
-                : '';
+    .replace(/&quot;/g,'"')
+    .replace(/&apos;/g,`'`)
+    .replace('<br>', `\n\n`)
+    .replace(/(<([^>]+)>)/ig, '')
+    .replace(/&lt;/g,'<')
+    .replace(/&gt;/g,'>')
+    .replace(/&amp;/g,'&')
+    : '';
 }
 
 const response = await fetch(`https://www.urbandictionary.com/define.php?term=${args[0]}`);
