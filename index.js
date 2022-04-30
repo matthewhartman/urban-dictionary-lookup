@@ -9,6 +9,7 @@ var args = process.argv.slice(2);
 
 const formatHTML = function(html) {
   return html ? html
+    .replace(/[\r\n]/g, ' ')
     .replace(/&quot;/g,'"')
     .replace(/&apos;/g,`'`)
     .replace('<br>', `\n\n`)
@@ -26,14 +27,13 @@ const html = parse(body);
 const meaning = html.querySelector('.meaning');
 const word = html.querySelector('.word');
 const example = html.querySelector('.example');
-console.log();
 
 if (meaning) {
   const white = chalk.hex('#fff');
   const darksmoke = chalk.hex('#aaa');
   const grey = chalk.hex('#777');
 
-  console.log(`\n${white.inverse.bold(` ${word.innerText} `)} \n`);
+  console.log(`\n${white.inverse.bold(`${word.innerText}`)} \n`);
   console.log(darksmoke(`${formatHTML(meaning.innerHTML)} ${example ? `${grey(`\n\nexample: ${formatHTML(example.innerHTML)}`)}` : ''}\n`));
 } else {
   console.log(`Could not find definition for ${args[0]}`);
